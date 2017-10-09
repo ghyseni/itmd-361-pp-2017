@@ -14,6 +14,8 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 #two,
 #one {
   color: white;
+  width: 100vw;
+  height: 100vw;
 }
 #three {
   background-color: purple;
