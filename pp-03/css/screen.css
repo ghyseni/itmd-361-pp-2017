@@ -34,6 +34,19 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
   display: flex;
   flex-wrap: wrap;
 }
+.no-flexbox #content{
+  float: left;
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+}
+
+.no-flexbox #three,
+.no-flexbox #two,
+.no-flexbox #one {
+  float:right;
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+}
 
 .flexbox #three {
   order: 3;
