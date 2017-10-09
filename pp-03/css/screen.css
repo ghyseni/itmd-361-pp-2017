@@ -76,10 +76,27 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 }
 
 @media screen and (min-width: 800px) {
+
+  .no-flexbox #content{
+    width:100%;
+    -webkit-transform: none;
+    transform: none;
+  }
+
   #three,
   #two,
   #one {
     width: 33.333333vw; /* 100 / 3 = 33.333333*/
+    height: 33.333333vw;
+  }
+
+  .no-flexbox #three,
+  .no-flexbox #two,
+  .no-flexbox #one {
+    float:right;
+    -webkit-transform: none;
+    transform: none;
+    width: 33.333333%; /* 100 / 3 = 33.333333*/
     height: 33.333333vw;
   }
 }
