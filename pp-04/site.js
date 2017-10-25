@@ -26,7 +26,7 @@
 //  the global scope:
 
 function arrayEach(array, func) {
-  for (i = 0; i < array.length; i++) {
+  for (var i = 0; i < array.length; i++) {
     func(array[i]);
   }
 }
