@@ -2,15 +2,18 @@
 //  outputs the correct value for x (5) even after double(6) is
 //  called:
 
-var x = 5;
+(function() {
+  var x = 5;
 
-function double(num) {
-  var x = num * 2;
-  return x;
-}
+  function double(num) {
+    var x = num * 2;
+    return x;
+  }
 
-double(6);
-console.log('The value of x is:', x, 'It should be 5.');
+  double(6);
+  console.log('The value of x is:', x, 'It should be 5.');
+
+})();
 
 //  2. Rewrite the corrected JavaScript above as a self-executing
 //  anonymous function that does not pollute the global
@@ -28,7 +31,7 @@ function arrayEach(array, func) {
   }
 }
 
-arrayEach(['red','green','blue'], console.log);
+arrayEach(['red', 'green', 'blue'], console.log);
 
 console.log(i) // should be 'undefined', not 3
 
