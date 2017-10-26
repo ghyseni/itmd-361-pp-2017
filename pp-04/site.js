@@ -33,12 +33,15 @@ function arrayEach(array, func) {
 
 arrayEach(['red', 'green', 'blue'], console.log);
 
-console.log(i) // should be 'undefined', not 3
+// console.log(i) // should be 'undefined', not 3
 
 //  4. Explain why this function does not modify the global
 //  variable x declared on line 5 above. Write your explanation
 //  as JavaScript comments.
 
+//  This function does not change the global variable x value
+// because function arguments are automatically scoped inside the function
+// so argument x will be used inside the function, and not the x from the global scope
 function addTwo(x) {
   x = x + 2;
   return x;
