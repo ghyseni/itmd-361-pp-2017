@@ -2,9 +2,9 @@
 //  outputs the correct value for x (5) even after double(6) is
 //  called:
 
-(function() {
-  var x = 5;
+var x = 5;
 
+(function() {
   function double(num) {
     var x = num * 2;
     return x;
