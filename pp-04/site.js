@@ -4,7 +4,23 @@
 
 var x = 5;
 
+function double(num) {
+  var x = num * 2;
+  return x;
+}
+
+double(6);
+console.log('The value of x is:', x, 'It should be 5.');
+
+
+//  2. Rewrite the corrected JavaScript above as a self-executing
+//  anonymous function that does not pollute the global
+//  namespace (e.g., neither its variables nor the double
+//  function can be accessed via the `window` global object,
+//  like `window.x`):
 (function() {
+  var x = 5;
+
   function double(num) {
     var x = num * 2;
     return x;
@@ -12,15 +28,7 @@ var x = 5;
 
   double(6);
   console.log('The value of x is:', x, 'It should be 5.');
-
 })();
-
-//  2. Rewrite the corrected JavaScript above as a self-executing
-//  anonymous function that does not pollute the global
-//  namespace (e.g., neither its variables nor the double
-//  function can be accessed via the `window` global object,
-//  like `window.x`):
-
 
 //  3. Correct this function so that there is no i variable in
 //  the global scope:
