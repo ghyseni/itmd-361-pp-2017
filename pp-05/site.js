@@ -1,15 +1,9 @@
 $(document).ready(function() {
 
-  var doorBellRinging = false;
   var doorbell = new Audio('media/doorbell.mp3');
 
   doorbell.addEventListener('ended', function() {
-    doorBellRinging = false;
     $('#ring-doorbell').removeClass('ringing');
-  });
-
-  doorbell.addEventListener('started', function() {
-    doorBellRinging = false;
   });
 
   $('#ring-doorbell').on('click', function() {
