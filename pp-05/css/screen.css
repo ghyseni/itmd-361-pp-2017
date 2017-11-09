@@ -25,6 +25,18 @@ body {
 
 #ring-doorbell{
   cursor:pointer;
+  position: relative;
+}
+
+#ring-doorbell.ringing::after{
+  content: "";
+  width: 1em;
+  height: 1em;
+  background: url('../images/sound.gif') center no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  right: -30px;
 }
 
 /* ===== MODULAR STYLES ===== */
