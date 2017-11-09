@@ -5,6 +5,11 @@ $(document).ready(function() {
 
   doorbell.addEventListener('ended', function() {
     doorBellRinging = false;
+    $('#ring-doorbell').removeClass('ringing');
+  });
+
+  doorbell.addEventListener('started', function() {
+    doorBellRinging = false;
   });
 
   $('#ring-doorbell').on('click', function() {
@@ -21,5 +26,6 @@ $(document).ready(function() {
 
   function ringDoorbell() {
     doorbell.play();
+    $('#ring-doorbell').addClass('ringing');
   }
 });
